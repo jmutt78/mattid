@@ -1,6 +1,6 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
-import ProductsListingItem from "./ProductsListingItem"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
+import ProductsListingItem from "./ProductsListingItem";
 
 const PRODUCTS_LISTING_QUERY = graphql`
   query ProductsListingQuery {
@@ -32,12 +32,12 @@ const PRODUCTS_LISTING_QUERY = graphql`
       }
     }
   }
-`
+`;
 
 const ProductsListing = () => {
   return (
     <div>
-      <h2 className="title">Level Up Products</h2>
+      <h2 className="title">Matti D</h2>
       <StaticQuery
         query={PRODUCTS_LISTING_QUERY}
         render={({ products }) => {
@@ -47,11 +47,11 @@ const ProductsListing = () => {
                 <ProductsListingItem key={product.id} product={product} />
               ))}
             </div>
-          )
+          );
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default ProductsListing
+export default ProductsListing;
